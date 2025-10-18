@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Option Project</title>
+    <link rel="stylesheet" href="css/option.css">
+</head>
+<body class="option-page">
+    <header>
+        <h1>Tevita Saafi</h1>
+        <h2>My CSS Option Assignment</h2>
+    </header>
+
+    <main>
+        <section class="content-box">
+            <p>
+                For this assignment, I chose some of the advanced CSS features and decided to create a travel website called <strong>Wander World</strong>. My website is all about exploring beautiful 
+                places around the world and encouraging people to discover and explore new destinations. I built it using HTML5 and CSS3, focusing on applying different CSS techniques that I learned 
+                from Chapters 6 and 7 of the Frain textbook.
+            </p>
+
+            <p>
+                My website includes three pages: a <strong>Home</strong> page, a <strong>Gallery</strong> page, and an <strong>About</strong> page. The Home page welcomes visitors with a large background image 
+                and a transparent overlay that introduces what the site is about. The Destination page has a horizontal scrolling section where visitors can look through different travel photos with cool visual effects. 
+                The About page explains the purpose of the site and shares a few travel tips that are displayed in two columns to make it easier to read.
+            </p>
+
+            <p>
+                Throughout the site, I used several CSS features to make it look more modern and visually appealing. These include shadows, filters, transparency effects, and a media query for high-resolution images. 
+                My main goal was to design a simple but creative website that shows I've learned about CSS styling and layout while keeping the theme fun and travel-focused.
+            </p>
+
+            <h3>CSS Features Used</h3>
+            <ol>
+                <li>
+                    <strong>Multi-Column Layout:</strong> 
+                    I used the multi-column layout feature on my About page (about.html) to display the Our Story and Our Mission sections side by side. This makes the text easier to read and creates a balanced visual layout. 
+                    The CSS property used was <code>column-count: 2;</code> to divide the content into two columns.
+                </li>
+
+                <li>
+                    <strong>Horizontal Scrolling:</strong>  
+                    I applied horizontal scrolling on my Destinations page for the travel destination scrolling cards. This allows users to scroll sideways to view more destination cards smoothly. The CSS properties 
+                    <code>display: flex;</code> and <code>overflow-x: auto;</code> were used to create this scrolling effect. I also added some responsive media styles to make sure the gallery is more well organized 
+                    for mobile users which has been approved when it was tested.
+                </li>
+
+                <li>
+                    <strong>Alpha Transparency:</strong>
+                     I used alpha transparency in my Home page (index.html) hero section overlay behind the main title and tagline. This effect was achieved using the RGBA color value <code>rgba(0, 0, 0, 0.6)</code>, which creates 
+                     a semi-transparent background while keeping the text readable over the image.  
+                </li>
+
+                <li>
+                    <strong>Linear Gradients:</strong>  
+                    On my <strong>Home page</strong>, I used a subtle linear gradient on the hero banner overlay to blend the background image and make the text stand out. The gradient was created using the CSS property <code>background: 
+                    linear-gradient()</code> with soft blue tones that match the site's theme.
+                </li>
+
+                <li>
+                    <strong>@Font-Face Rules:</strong>
+                    I imported a custom font for my headings using the <code>@font-face</code> rule in my CSS.  I was able to use two fonts from Google Fonts like Montserrat and Pacifico, and applied them both across all pages to make the titles 
+                    and hero text match the travel brand's style and stand out more. The custom fonts also helps maintain design consistency throughout the site.
+                </li>
+
+                <li>
+                    <strong>Text and Box Shadows:</strong>
+                    I used text shadows and box shadows throughout the site to add depth and emphasis to key elements. For example, text shadows were applied to the hero heading on the Home page to improve visibility against the image 
+                    background, and box shadows were used around gallery boxes on the Destination page to give a 3D appearance and higglight as a transforming appearance.
+                </li>
+            </ol>
+
+            <h3>Here's The Link:</h3>
+            <a href="index.html">WanderWorld</a>
+        </section>
+    </main>
+</body>
+</html>
