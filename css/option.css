@@ -1,0 +1,484 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+  background-color: #0056A0; /* deep ocean blue */
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Flex container for logo + nav links */
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Site title */
+header h1 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Navigation styling */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #FFD700; /* gold hover highlight */
+}
+
+/* --- Hero Banner Section --- */
+.hero {
+  position: relative;
+  background-size: cover; /* Makes sure the image fills the section */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat;
+  background-color: #87cefa;
+  height: 100vh; /* Makes it take full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Alpha transparent overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(137, 205, 241, 0.5); /* this is the transparency layer */
+}
+
+/* Banner Image */
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills the section */
+  display: block;
+}
+
+/* Text on top of banner */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #000000;
+  padding: 20px 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+@font-face {
+  font-family: 'WanderBold';
+  src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'WanderScript';
+  src: url('../fonts/Pacifico/Pacifico-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Main title */
+.hero-text h2 {
+  font-family: 'WanderBold', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.hero-text p {
+  font-family: 'WanderScript', cursive;
+  font-size: 1.4rem;
+  color: #000;
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.8);
+  margin-top: 80px; /* pushes subtitle further down to green ocean area */
+}
+
+/* --- Welcome Section --- */
+.welcome {
+  background-color: #87cefa; /* light blue background */
+  padding: 60px 80px;
+  text-align: center;
+}
+
+.welcome h1 {
+  font-family: 'WanderBold';
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.welcome p {
+  font-size: 1.1rem;
+  color: #000;
+  max-width: 850px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.button {
+  background-color: #004a99;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #0066cc;
+}
+
+/* Footer */
+footer {
+  background-color: #0056A0;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
+/* Tablets (landscape & portrait) */
+@media (max-width: 1024px) {
+  .hero {
+    height: 80vh; /* slightly smaller on tablets */
+    background-position: center top;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .hero {
+    height: 70vh;
+    padding: 40px 10px;
+    background-position: center top;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .explore-btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Featured Destinations Horizontal Scroll */
+.featured-section {
+  margin: 60px 0;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #7abaff, #90e0ef);
+  text-align: center;
+}
+
+.featured-section h2 {
+  font-family: 'WanderBold';
+  color: #004a99;
+  margin-bottom: 25px;
+  font-size: 2em;
+}
+
+/* Scrollable container */
+.scroll-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 1em;
+  padding-bottom: 15px;
+  scroll-behavior: smooth;
+}
+
+.scroll-gallery::-webkit-scrollbar {
+  height: 10px;
+}
+
+.scroll-gallery::-webkit-scrollbar-thumb {
+  background: #004a99;
+  border-radius: 10px;
+}
+
+.scroll-gallery::-webkit-scrollbar-track {
+  background: #d9f2ff;
+}
+
+/* Each item */
+.scroll-item {
+  flex: 0 0 auto;
+  width: 250px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.scroll-item:hover {
+  transform: translateY(-5px);
+}
+
+.scroll-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  filter: brightness(90%) saturate(110%);
+}
+
+.scroll-item h4 {
+  margin: 10px;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.scroll-item p {
+  margin: 0 15px 15px;
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.4;
+}
+
+.site-header {
+  font-family: 'WanderBold';
+  text-align: center;
+  background: linear-gradient(to right, #34b3f8, #90e0ef);
+  padding: 60px 20px;
+  color: #004a99;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 50px;
+}
+
+.site-header p {
+  font-size: 1.1em;
+  color: rgba(0,0,0,0.7);
+  margin-top: 10px;
+}
+
+/* About Section Container */
+.about-section {
+  max-width: 1000px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  padding: 20px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 40px;
+}
+
+/* Columns Wrapper */
+.about-columns {
+  column-count: 2;          
+  column-gap: 50px;         
+  text-align: left;
+}
+
+/* Column Headings */
+.about-columns h3 {
+  color: #004a99;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs inside Columns */
+.about-columns p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+/* Responsive: Stack columns on small screens */
+@media (max-width: 768px) {
+  .about-columns {
+    column-count: 1;        /* Switch to single column for mobile */
+  }
+}
+
+/* Contact Section */
+.contact {
+  background-color: #004a99;
+  color: white;
+  text-align: center;
+  padding: 60px 10%;
+  border-radius: 10px 10px 0 0;
+  margin-top: 60px; /* space above contact info */
+  padding-top: 30px;
+  border-top: 2px solid #eee; /* subtle divider line (optional) */
+}
+
+.contact h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  line-height: 1.8;
+  font-size: 1.05em;
+  color: rgba(255,255,255,0.9);
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  flex: 1 1 200px;
+}
+
+.contact-item h3 {
+  color: #ffcc00;
+  margin-bottom: 8px;
+}
+
+.contact-item a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.contact-item a:hover {
+  color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+}
+
+/* Apply only to option.html */
+body.option-page {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #b3e0ff;
+  margin: 0;
+  padding: 0;
+  color: #111;
+}
+
+/* Header Section */
+.option-page header {
+  background-color: #004a99;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.option-page header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.option-page header h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* Main Section */
+.option-page main {
+  padding: 40px 20px;
+}
+
+/* White Content Box */
+.option-page .content-box {
+  background-color: white;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraph Spacing */
+.option-page .content-box p {
+  line-height: 1.7;
+  margin-bottom: 20px; /* adds clear spacing between paragraphs */
+}
+
+/* Section Headings */
+.option-page h3 {
+  color: #003366;
+  margin-top: 30px;
+  font-size: 1.4rem;
+}
+
+.option-page ol {
+  margin-left: 25px;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.option-page ol li {
+  margin-bottom: 25px;
+}
+
+.option-page ol li strong {
+  color: #003366;
+}
